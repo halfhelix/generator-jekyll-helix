@@ -1,0 +1,22 @@
+{
+  "name": "Jekyll-Helix",
+  "homepage": "https://github.com/no2-co/generator-jekyll-helix",
+  "authors": [
+    "peterberwind <peterberwind@gmail.com>"
+  ],
+  "description": "yeoman generator for jekyll and gulp",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "^4.2.7",
+    "neat": "^1.8.0"
+  }
+}
