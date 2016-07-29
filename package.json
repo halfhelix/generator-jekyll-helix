@@ -2,7 +2,7 @@
   "name": "generator-jekyll-helix",
   "version": "1.0.0",
   "main": "index.js",
-  "description": "A Yeoman generator for Jekyll to rapidly build sites using Gulp",
+  "description": "A Yeoman generator for Jekyll to rapidly build sites using Gulp tooling for speedy development.",
   "keywords": [
     "yeoman-generator",
     "jekyll",
