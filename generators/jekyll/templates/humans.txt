@@ -3,11 +3,9 @@
 
 # TEAM
 
-    <%= authorName %> -- <role> -- @
-
-# THANKS
-
-    <name>
+    Half Helix -- Modern Design and Development Agency
+    www.halfhelix.com
+    hello@halfhelix.com
 
 # TECHNOLOGY COLOPHON
 

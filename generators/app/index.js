@@ -54,23 +54,6 @@ module.exports = generators.Base.extend({
       validate: i => i.startsWith('http') ? true : 'URL must contain either HTTP or HTTPs',
       store: true
     }, {
-      name: 'authorName',
-      message: 'What\'s your name?',
-      store: true
-    }, {
-      name: 'authorEmail',
-      message: 'What\'s your email?',
-      store: true
-    }, {
-      name: 'authorURI',
-      message: chalk.yellow('Can be the same as this site\n') +
-        chalk.yellow('? ') + 'What is your homepage?',
-      store: true
-    }, {
-      name: 'authorBio',
-      message: 'Write a short description about yourself',
-      store: true
-    }, {
       name: 'uploading',
       type: 'list',
       message: 'How do you want to upload your site?',
@@ -104,8 +87,8 @@ module.exports = generators.Base.extend({
       description: this.props.projectDescription,
       homepage: this.props.projectURL,
       author: {
-        name: this.props.authorName,
-        email: this.props.authorEmail
+        name: 'Half Helix',
+        email: 'hello@halfhelix.com'
       }
     };
 
@@ -126,7 +109,7 @@ module.exports = generators.Base.extend({
         projectName: this.props.projectName,
         projectDescription: this.props.projectDescription,
         projectURL: this.props.projectURL,
-        authorName: this.props.authorName,
+        authorName: 'Half Helix',
         content: `
 #### Settings
 In your \`_config.yml\` and \`humans.txt\` you should add your Github and Twitter
@@ -167,10 +150,6 @@ on Github](https://github.com/sondr3/generator-jekyllized).
         projectName: this.props.projectName,
         projectDescription: this.props.projectDescription,
         projectURL: this.props.projectURL,
-        authorName: this.props.authorName,
-        authorEmail: this.props.authorEmail,
-        authorURI: this.props.authorURI,
-        authorBio: this.props.authorBio,
         jekyllPermalinks: this.props.jekyllPermalinks
       }
     }, {
