@@ -226,21 +226,6 @@ gulp.task('deploy', () => {
 You might also have to configure the URL for your site if you want to use Github
 Pages. Luckily the Jekyll documentation [has you covered][jekyll-url].
 
-> Why don't you support Stylus/LESS/Angular/etc
-
-Because I've never used them nor do I have any plans of using them. Furthermore,
-they're a bit outside what I want with this generator anyways. I want a lean,
-simple and opinionated generator, not a big complicated one.
-
-## Contributing
-
-See the [contribution][contribute] docs.
-
-## [Changelog][changelog]
-
-## License
-
-MIT © Sondre Nilsen (https://github.com/sondr3)
 
 [awspublish]: https://github.com/pgherveou/gulp-awspublish
 [browsersync]: https://github.com/shakyShane/browser-sync
