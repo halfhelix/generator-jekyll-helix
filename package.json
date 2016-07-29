@@ -1,6 +1,6 @@
 {
   "name": "generator-jekyll-helix",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "description": "A Yeoman generator for Jekyll to rapidly build sites using Gulp tooling for speedy development.",
   "keywords": [
@@ -16,8 +16,7 @@
   "author": "Half Helix",
   "repository": "no2-co/generator-jekyllized",
   "license": "MIT",
-  "scripts": {
-  },
+  "scripts": {},
   "files": [
     "generators",
     "README.md",
