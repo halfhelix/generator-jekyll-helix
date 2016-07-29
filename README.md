@@ -47,10 +47,10 @@ new/updated site is uploaded to your platform of choice.
 * **Node**: `>4.2` and Yo `>1.7.0`
 * **Gulp:** Since the release candidate is running Gulp 4.0 you need to install
   `gulp-cli`: `npm install gulp-cli -g`
-* **Jekyllized:** Then install Jekyllized: `npm install generator-jekyllized -g`
+* **Jekyllized:** Then install Jekyllized: `npm install generator-jekyll-helix -g`
 
 #### Install
-* **Scaffold:** Run `yo jekyllized` in the directory you want scaffold your site
+* **Scaffold:** Run `yo jekyll-helix` in the directory you want scaffold your site
     in
 * **Start:** Run `gulp` and watch the magic unfold
 
