@@ -1,10 +1,10 @@
-# generator-jekyllized [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# generator-jekyll-helix [![NPM version][npm-image]][npm-url]
 
 ***NOTE: Currently using gulp 4.0 which is in beta!***
 
 ## Introduction
 
-`generator-jekyllized` is a very opinionated [Yeoman][yeoman] generator built
+`generator-jekyll-helix ` is a very opinionated [Yeoman][yeoman] generator built
 with [Jekyll][jekyll] and [gulp][gulp]. You will be able to quickly scaffold
 your site and start developing. As you are working on your site your assets will
 automatically be updated and injected into your browser as well as your posts.
@@ -47,7 +47,7 @@ new/updated site is uploaded to your platform of choice.
 * **Node**: `>4.2` and Yo `>1.7.0`
 * **Gulp:** Since the release candidate is running Gulp 4.0 you need to install
   `gulp-cli`: `npm install gulp-cli -g`
-* **Jekyllized:** Then install Jekyllized: `npm install generator-jekyll-helix -g`
+* **Jekyll-Helix :** Then install Jekyll-Helix: `npm install generator-jekyll-helix -g`
 
 #### Install
 * **Scaffold:** Run `yo jekyll-helix` in the directory you want scaffold your site
@@ -56,10 +56,10 @@ new/updated site is uploaded to your platform of choice.
 
 #### Update
 It's recommended that you keep your gulp tasks and packages up to date, luckily
-this is very easy with `genertor-jekyllized`! All you need to do is run `yo
-jekyllized:update` and you'll be up to date. If you want to skip the
+this is very easy with `generator-jekyll-helix `! All you need to do is run `yo
+jekyll-helix:update` and you'll be up to date. If you want to skip the
 installation and only update you can run it with `--skip-install`. **NOTE:**
-Running `yo jekyllized:update` will overwrite any changes made to `package.json`
+Running `yo jekyll-helix:update` will overwrite any changes made to `package.json`
 and your gulp files, so back them up!
 
 ## Usage
