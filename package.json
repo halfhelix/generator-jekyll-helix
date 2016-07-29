@@ -1,6 +1,6 @@
 {
-  "name": "generator-jekyllized",
-  "version": "1.0.0-rc.5",
+  "name": "generator-jekyll-helix",
+  "version": "1.0.0",
   "main": "index.js",
   "description": "A Yeoman generator for Jekyll to rapidly build sites using Gulp",
   "keywords": [
@@ -10,14 +10,13 @@
     "static-site",
     "website",
     "web",
-    "scaffold",
+    "half helix",
     "gulp"
   ],
-  "author": "Sondre Nilsen",
-  "repository": "sondr3/generator-jekyllized",
+  "author": "Half Helix",
+  "repository": "no2-co/generator-jekyllized",
   "license": "MIT",
   "scripts": {
-    "test": "xo && nyc ava"
   },
   "files": [
     "generators",
