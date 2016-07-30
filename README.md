@@ -12,25 +12,33 @@ When you are done developing and want to publish it you are two commands away
 from having everything optimized and published.
 
 ## Features
-> Rapidly prototype
+> Yeoman
 
-While developing locally everything you change will automatically be updated and
-injected into your browser. Changing your SCSS or JavaScript files will
-automatically updated them, create sourcemaps and inject them. Writing or
-editing posts and pages for your website will do the same. Simple and effective.
+Ditch your startket stored in hithub and repedative setup tasks you do at the start of each project.
+Yeoman asks you a few simple questions and scaffolds out a project ready to go, with just what you need.
 
 > Jekyll
 
 Built on top of Jekyll 3, you get a mature and stable base with the full power
-that Jekyll brings you. You'll have sitemaps, Atom feeds generated and SEO meta
-data tags added to your posts and pages.
+that Jekyll brings you. You should be using a static site generator or templating system
+if you're making more then a single page. Its 2016, get with it.
 
-> Optimize your assets
+> Browser Sync
 
-When you are done developing you can have your assets optimized and injected
-correctly into your HTML. Your assets will be minified, compressed with gzip,
-cache busted and otherwise optimized. Your images will be run through
+While developing locally everything you change will automatically be updated and
+injected into your browser. Changing your SCSS or JavaScript files will
+automatically updated them, create sourcemaps and inject them. Writing or
+editing posts and pages for your website will do the same.
+
+> Gulp Asset Pipeline
+
+This is a big improvement over teh standard Jekyll pipeline. When you are done developing you can have your assets optimized and injected
+correctly into your HTML. Your assets will be minified, compressed with gzip, and cached. Your images will be run through
 compressors to save space and even your HTML will be minified.
+
+> Bower
+
+> Bourbon + Neat
 
 > Deploying
 
@@ -54,17 +62,17 @@ new/updated site is uploaded to your platform of choice.
     in
 * **Start:** Run `gulp` and watch the magic unfold
 
-#### Update
+<!-- #### Update
 It's recommended that you keep your gulp tasks and packages up to date, luckily
 this is very easy with `generator-jekyll-helix `! All you need to do is run `yo
 jekyll-helix:update` and you'll be up to date. If you want to skip the
 installation and only update you can run it with `--skip-install`. **NOTE:**
 Running `yo jekyll-helix:update` will overwrite any changes made to `package.json`
-and your gulp files, so back them up!
+and your gulp files, so back them up! -->
 
 ## Usage
 
-#### `gulp [--prod]`
+#### `gulp`
 
 This is the default command, and probably the one you'll use the most. This
 command will build your assets and site with development settings. You'll get
@@ -86,66 +94,34 @@ your posts and no drafts.
 This command is identical to the normal `gulp [--prod]` however it will not
 create a BrowserSync session in your browser.
 
-#### `gulp (build) [--prod]` main subtasks
-> `gulp jekyll [--prod]`
-
-Without production settings Jekyll will only create the 10 latest posts and will
-create both future posts and drafts. With `--prod` none of that is true and it
-will generate all your posts.
-
-> `gulp styles|scripts [--prod]`
-
-Both your CSS and JS will have sourcemaps generated for them under development
-settings. Once you generate them with production settings sourcemap generation
-is disabled. Both will be minified, gzipped and cache busted with production
-settings.
-
-> `gulp images`
-
-Optimizes and caches your images. This is a set it and forget it command for the
-most part.
-
-> `gulp html --prod`
-
-**Does nothing without `--prod`.** Minifies and gzips your HTML files.
-
-> `gulp serve`
-
-If you just want to watch your site you can run this command. If wanted you can
-also edit the `serve` task to allow it to tunnel via [localtunnel][localtunnel]
-so people outside your local network can view it as well:
-
-```js
-    // tunnel: true,
-```
-
-You can also change the behaviour for how it opens the URL when you run `gulp
-[--prod]`, you can see the options [here][browsersync-open]:
-
-```js
-    // open: false,
-```
-
 #### `gulp deploy`
 
 When you're done developing and have built your site with either `gulp --prod`
 or `gulp build --prod` you can deploy your site to either Amazon S3, Github
 Pages or with Rsync.
 
-> Amazon S3 and Rsync
+<!-- > Amazon S3 and Rsync
 
 If you chose either of these two, you'll have a `[rsync/aws]-credentials.json`
 file in your root folder that you have to fill out. It should be pretty self
 explanatory, however, if you need any help with configuring it, you should check
 out either the [`gulp-awspublish`][awspublish] repo or [`gulp-rsync`][rsync]
-repo for help.
-
+repo for help. -->
+<!--
 > Github Pages
 
 If you chose to upload to Github Pages there's no configuration besides starting
 a git repo in your folder, setting an `origin` remote repo and run `gulp
 deploy`. Your site will be automatically pushed to Github. See the
-[FAQ][frequentlyasked] for configuring personal repos vs project repos.
+[FAQ][frequentlyasked] for configuring personal repos vs project repos. -->
+
+### Subtasks
+
+All of the subtasks lives in their own files in the `gulp` directory and are
+named after what they do. You can edit or look at any of them to see how they
+actually work. They're all commented.
+
+Some sub tasks are:
 
 #### `gulp check`
 
@@ -164,15 +140,11 @@ Only use this if you want to regenerate everything, this will delete everything
 generated. Images, assets, your Jekyll site. You really shouldn't need to do
 this.
 
-### Subtasks
-
-All of the subtasks lives in their own files in the `gulp` directory and are
-named after what they do. You can edit or look at any of them to see how they
-actually work. They're all commented.
+### check the project gulp file for a details on all availible subtasks
 
 ## Frequently Asked Questions
 
-> Inject more than one JavaScript file
+<!-- > Inject more than one JavaScript file
 
 If you want to split up your JavaScript files into say a `index.js` and a
 `vendor.js` file with files from [Bower][bower] you can do this quite easily. Create a
@@ -205,26 +177,7 @@ the `index.js` file you have to either rename the `index.js` file or rename the
 running with `--prod` it'll automatically optimize and such as well.
 
 For more advanced uses, refer to the [`gulp-inject`][inject] documentation on
-how to create individual inject tags and inject specific files into them.
-
-> Github Pages configuration
-
-By default if you select Github Pages as your deployment option your site will
-be pushed to a `gh-pages` branch, this works fine for any project pages but
-won't work for your personal repo. If you want to use a `username.github.io`
-site you'll have to change it to this:
-
-```js
-gulp.task('deploy', () => {
-  return gulp.src('dist/**/*')
-    .pipe($.ghPages({
-      branch: "master"
-    }));
-});
-```
-
-You might also have to configure the URL for your site if you want to use Github
-Pages. Luckily the Jekyll documentation [has you covered][jekyll-url].
+how to create individual inject tags and inject specific files into them. -->
 
 
 [awspublish]: https://github.com/pgherveou/gulp-awspublish

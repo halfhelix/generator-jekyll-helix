@@ -121,13 +121,13 @@ If you have cloned this repo or want to reinstall, make sure there's no
 \`bundle install\`.
 
 #### Update
-To update: \`npm update generator-jekyllized -g\`, then run \`yo jekyllized:gulp
+To update: \`npm update generator-jekyll-helix -g\`, then run \`yo generator-jekyll-helix:gulp
 [--rsync|amazon|pages]\` in this directory. Note that this will overwrite any
 local changes, so back it up.
 
 ## Github
 For more information on how to use your new project, please refer to the [README
-on Github](https://github.com/sondr3/generator-jekyllized).
+on Github]().
 `
       }
     }, {
