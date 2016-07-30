@@ -1,11 +1,23 @@
 body {
-  background-color: lightgrey;
-  color: black;
-}
+  background-image: linear-gradient(-135deg, #6DABF3 0%, #3B73E2 100%);
 
-.delete-me {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
+  ::selection {
+    background: #3B73E2;
+    color: #F2F2F2;
+  }
+
+  .delete-me {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+    color: #F2F2F2;
+    @include outer-container;
+
+    h1 {
+      font-size: 3em;
+    }
+  }
 }
