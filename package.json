@@ -43,6 +43,7 @@
     "space": true,
     "ignores": [
       "generators/app/templates/**",
+      "generators/gulp/templates/**",
       "generators/jekyll/templates/**"
     ]
   }
