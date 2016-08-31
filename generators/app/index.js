@@ -145,6 +145,13 @@ on Github]().
       local: require.resolve('generator-statisk/generators/gulp')
     });
 
+    this.composeWith('jekyllized:gulp', {
+      options: {}
+    }, {
+      local: require.resolve('../gulp')
+    });
+
+    // TODO: figure this out
     this.composeWith('jekyllized:jekyll', {
       options: {
         projectName: this.props.projectName,
